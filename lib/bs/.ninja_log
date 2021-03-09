@@ -1,0 +1,12 @@
+# ninja log v6
+1	92	1615305036058125091	app/javascript/home/home.ast	3b15f0f36cb71979
+2	94	1615305036058506425	FullstackApp.cmi	3427ee67b138f60a
+92	649	1615305036615692264	app/javascript/home/home.d	751a5a4b2adc4ed0
+649	677	1615305036643187770	app/javascript/home/home-FullstackApp.cmj	d5a3aec0817d5618
+649	677	1615305036643187770	app/javascript/home/home-FullstackApp.cmi	d5a3aec0817d5618
+649	677	1615305036643187770	../../app/javascript/home/home.bs.js	d5a3aec0817d5618
+1	26	1615305074178336540	app/javascript/home/home.ast	3b15f0f36cb71979
+26	40	1615305074178336540	app/javascript/home/home.d	751a5a4b2adc4ed0
+40	62	1615305074214060587	app/javascript/home/home-FullstackApp.cmj	d5a3aec0817d5618
+40	62	1615305074214060587	app/javascript/home/home-FullstackApp.cmi	d5a3aec0817d5618
+40	62	1615305074214060587	../../app/javascript/home/home.bs.js	d5a3aec0817d5618

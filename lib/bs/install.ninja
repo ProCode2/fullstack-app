@@ -1,0 +1,13 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o home-FullstackApp.cmi : cp ../bs/app/javascript/home/home-FullstackApp.cmi
+o home-FullstackApp.cmj : cp ../bs/app/javascript/home/home-FullstackApp.cmj
+o home-FullstackApp.cmt : cp ../bs/app/javascript/home/home-FullstackApp.cmt
+o home.res : cp ../../app/javascript/home/home.res
+o FullstackApp.cmi : cp ../bs/FullstackApp.cmi
+o FullstackApp.cmj : cp ../bs/FullstackApp.cmj
+o FullstackApp.cmt : cp ../bs/FullstackApp.cmt
+build install.stamp : touch home-FullstackApp.cmi home-FullstackApp.cmj FullstackApp.cmi FullstackApp.cmj

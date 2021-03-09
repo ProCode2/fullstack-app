@@ -1,0 +1,17 @@
+rescript = 1
+rule astj
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe  -bs-v 9.0.1 -bs-super-errors -absname -bs-ast -o $out $i
+o app/javascript/home/home.ast : astj ../../app/javascript/home/home.res
+rule deps
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsb_helper.exe -hash 7ba2cc37ae4932cc72fbf330fcb54c7b -bs-ns FullstackApp $in
+  restat = 1
+o app/javascript/home/home.d : deps app/javascript/home/home.ast
+rule mij
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -bs-ns FullstackApp -I . -I app/javascript/home -I app/javascript/packs -I app/javascript/stylesheets -I app/javascript/channels -I app/javascript -bs-super-errors  -bs-package-name fullstack-app -bs-package-output es6:$in_d:.bs.js $i
+  dyndep = 1
+  restat = 1
+o app/javascript/home/home-FullstackApp.cmj app/javascript/home/home-FullstackApp.cmi ../../app/javascript/home/home.bs.js : mij app/javascript/home/home.ast
+rule build_package
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  restat = 1
+o FullstackApp.cmi : build_package FullstackApp.mlmap
