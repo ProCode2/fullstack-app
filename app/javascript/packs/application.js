@@ -1,3 +1,3 @@
-import { fn } from "../home/home.bs.js";
+import * as Home from "../home/home.bs.js";
 
-window.fn = fn;
+window.react = Home.react;

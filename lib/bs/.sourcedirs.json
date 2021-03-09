@@ -1,1 +1,1 @@
-{ "dirs" : [ "app/javascript" , "app/javascript/channels" , "app/javascript/stylesheets" , "app/javascript/packs" , "app/javascript/home" ] , "pkgs" : [] , "generated" : [] }
+{ "dirs" : [ "app/javascript" , "app/javascript/channels" , "app/javascript/stylesheets" , "app/javascript/packs" , "app/javascript/home" ] , "pkgs" : [ [ "@rescript/react" , "/Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react" ] ] , "generated" : [] }

@@ -1,10 +1,12 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
 FLG -open FullstackApp
-FLG -ppx '/Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -as-ppx '
+FLG -ppx '/Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -as-ppx -bs-jsx 3'
 S /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/lib/ocaml
 B /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/lib/ocaml
 FLG -w +a-4-9-20-40-41-42-50-61-102
+S /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml
+B /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml
 S app/javascript/home
 B lib/bs/app/javascript/home
 ####BSB GENERATED: NO EDIT}
