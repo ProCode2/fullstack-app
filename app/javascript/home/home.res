@@ -1,13 +1,13 @@
-module Homepage = {
+module App = {
   @react.component
   let make = () => {
-    <h1> {React.string("Can you see me ?")} </h1>
+    <Nav />
   }
 }
 
-let react = () => {
+let run = () => {
   switch ReactDOM.querySelector("#reactRoot") {
-  | Some(root) => ReactDOM.render(<div> <Homepage /> </div>, root)
+  | Some(root) => ReactDOM.render(<div> <App /> </div>, root)
   | None => ()
   }
 }

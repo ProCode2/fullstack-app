@@ -3,11 +3,15 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
-o home-FullstackApp.cmi : cp ../bs/app/javascript/home/home-FullstackApp.cmi
-o home-FullstackApp.cmj : cp ../bs/app/javascript/home/home-FullstackApp.cmj
-o home-FullstackApp.cmt : cp ../bs/app/javascript/home/home-FullstackApp.cmt
-o home.res : cp ../../app/javascript/home/home.res
+o Nav-FullstackApp.cmi : cp ../bs/app/javascript/Nav/Nav-FullstackApp.cmi
+o Nav-FullstackApp.cmj : cp ../bs/app/javascript/Nav/Nav-FullstackApp.cmj
+o Nav-FullstackApp.cmt : cp ../bs/app/javascript/Nav/Nav-FullstackApp.cmt
+o Nav.res : cp ../../app/javascript/Nav/Nav.res
+o home-FullstackApp.cmi : cp ../bs/app/javascript/Home/home-FullstackApp.cmi
+o home-FullstackApp.cmj : cp ../bs/app/javascript/Home/home-FullstackApp.cmj
+o home-FullstackApp.cmt : cp ../bs/app/javascript/Home/home-FullstackApp.cmt
+o home.res : cp ../../app/javascript/Home/home.res
 o FullstackApp.cmi : cp ../bs/FullstackApp.cmi
 o FullstackApp.cmj : cp ../bs/FullstackApp.cmj
 o FullstackApp.cmt : cp ../bs/FullstackApp.cmt
-build install.stamp : touch home-FullstackApp.cmi home-FullstackApp.cmj FullstackApp.cmi FullstackApp.cmj
+build install.stamp : touch Nav-FullstackApp.cmi Nav-FullstackApp.cmj home-FullstackApp.cmi home-FullstackApp.cmj FullstackApp.cmi FullstackApp.cmj

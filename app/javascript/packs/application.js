@@ -1,3 +1,4 @@
-import * as Home from "../home/home.bs.js";
+import "stylesheets/application";
+import * as Home from "../Home/home.bs.js";
 
-window.react = Home.react;
+window.run = Home.run;

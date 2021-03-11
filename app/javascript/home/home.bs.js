@@ -2,27 +2,28 @@
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
+import * as Nav$FullstackApp from "../Nav/Nav.bs.js";
 
-function Home$Homepage(Props) {
-  return React.createElement("h1", undefined, "Can you see me ?");
+function Home$App(Props) {
+  return React.createElement(Nav$FullstackApp.make, {});
 }
 
-var Homepage = {
-  make: Home$Homepage
+var App = {
+  make: Home$App
 };
 
-function react(param) {
+function run(param) {
   var root = document.querySelector("#reactRoot");
   if (!(root == null)) {
-    ReactDom.render(React.createElement("div", undefined, React.createElement(Home$Homepage, {})), root);
+    ReactDom.render(React.createElement("div", undefined, React.createElement(Home$App, {})), root);
     return ;
   }
   
 }
 
 export {
-  Homepage ,
-  react ,
+  App ,
+  run ,
   
 }
 /* react Not a pure module */

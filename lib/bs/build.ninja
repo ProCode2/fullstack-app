@@ -2,16 +2,19 @@ rescript = 1
 g_finger := /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml/install.stamp
 rule astj
   command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe  -bs-v 9.0.1 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
-o app/javascript/home/home.ast : astj ../../app/javascript/home/home.res
+o app/javascript/Nav/Nav.ast : astj ../../app/javascript/Nav/Nav.res
 rule deps
-  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsb_helper.exe -hash 7ba2cc37ae4932cc72fbf330fcb54c7b -bs-ns FullstackApp $in
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsb_helper.exe -hash 546a3f3b3e71ae1d082b1fc235ffa785 -bs-ns FullstackApp $in
   restat = 1
-o app/javascript/home/home.d : deps app/javascript/home/home.ast
+o app/javascript/Nav/Nav.d : deps app/javascript/Nav/Nav.ast
 rule mij
-  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -bs-ns FullstackApp -I . -I app/javascript/home -I app/javascript/packs -I app/javascript/stylesheets -I app/javascript/channels -I app/javascript -I /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml -bs-super-errors  -bs-package-name fullstack-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -bs-ns FullstackApp -I . -I app/javascript/Home -I app/javascript/packs -I app/javascript/Nav -I app/javascript/stylesheets -I app/javascript/channels -I app/javascript -I /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml -bs-super-errors  -bs-package-name fullstack-app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
-o app/javascript/home/home-FullstackApp.cmj app/javascript/home/home-FullstackApp.cmi ../../app/javascript/home/home.bs.js : mij app/javascript/home/home.ast
+o app/javascript/Nav/Nav-FullstackApp.cmj app/javascript/Nav/Nav-FullstackApp.cmi ../../app/javascript/Nav/Nav.bs.js : mij app/javascript/Nav/Nav.ast
+o app/javascript/Home/home.ast : astj ../../app/javascript/Home/home.res
+o app/javascript/Home/home.d : deps app/javascript/Home/home.ast
+o app/javascript/Home/home-FullstackApp.cmj app/javascript/Home/home-FullstackApp.cmi ../../app/javascript/Home/home.bs.js : mij app/javascript/Home/home.ast
 rule build_package
   command = /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-platform/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
   restat = 1

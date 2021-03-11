@@ -7,6 +7,8 @@ B /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/bs-pla
 FLG -w +a-4-9-20-40-41-42-50-61-102
 S /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml
 B /Users/pradiptaghoshal/Desktop/projects/ruby/fullstack-app/node_modules/@rescript/react/lib/ocaml
-S app/javascript/home
-B lib/bs/app/javascript/home
+S app/javascript/Nav
+B lib/bs/app/javascript/Nav
+S app/javascript/Home
+B lib/bs/app/javascript/Home
 ####BSB GENERATED: NO EDIT}
